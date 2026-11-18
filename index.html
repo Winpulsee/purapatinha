@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pura Patinha · achadinhos dos vídeos</title>
+<meta name="description" content="Os achadinhos pet que aparecem nos vídeos da Pura Patinha. Procure pelo número do vídeo.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo.png">
+<style>
+:root{--fundo:#FFF7F0;--card:#FFFFFF;--texto:#2B1C14;--suave:#8A7366;--pessego:#FF9E5E;--pessego-claro:#FFE3CF;--verde:#21A99C;--borda:#F1E2D6}
+@media (prefers-color-scheme:dark){:root{--fundo:#140D0A;--card:#1F1612;--texto:#FFF5EC;--suave:#C2AB9C;--pessego:#FFB37A;--pessego-claro:#3A2418;--verde:#2EC4B6;--borda:#33251D}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.topo{max-width:720px;margin:0 auto;padding:28px 16px 8px;text-align:center}
+.topo img{width:84px;height:84px;border-radius:50%;background:var(--pessego-claro);display:block;margin:0 auto 10px}
+h1{font-size:24px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--suave);margin:6px 0 18px;font-size:15px}
+.busca{display:flex;align-items:center;gap:8px;background:var(--card);border:2px solid var(--pessego);border-radius:16px;padding:6px 6px 6px 16px;max-width:420px;margin:0 auto}
+.busca span{font-weight:700;color:var(--pessego);font-size:18px}
+.busca input{flex:1;min-width:0;border:0;background:transparent;color:var(--texto);font-size:20px;font-weight:700;padding:8px 0;outline:none}
+.busca button{border:0;background:var(--pessego);color:#2B1C14;font-weight:700;font-size:15px;border-radius:12px;padding:12px 16px;cursor:pointer}
+.aviso{color:var(--suave);font-size:14px;min-height:20px;margin:8px 0 0}
+main{max-width:720px;margin:0 auto;padding:12px 16px 32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (min-width:600px){main{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--borda);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.card:active{transform:scale(.98)}
+.card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;background:var(--pessego-claro)}
+.num{position:absolute;top:8px;left:8px;background:var(--texto);color:var(--fundo);font-weight:800;font-size:15px;padding:4px 10px;border-radius:999px}
+.selo{position:absolute;top:8px;right:8px;background:var(--verde);color:#fff;font-weight:700;font-size:11px;padding:4px 8px;border-radius:999px}
+.nome{padding:10px 12px 4px;font-weight:650;font-size:14px;line-height:1.3}
+.linha{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:4px 12px 12px;margin-top:auto;font-size:13px}
+.preco{font-weight:800;white-space:nowrap}.ver{color:var(--verde);font-weight:700;white-space:nowrap;font-size:12px}
+.card.achado{outline:3px solid var(--pessego);box-shadow:0 0 0 6px var(--pessego-claro)}
+.card.novo{border-color:var(--verde)}
+footer{max-width:720px;margin:0 auto;padding:0 16px 40px;color:var(--suave);font-size:12px;text-align:center}
+</style></head><body>
+<header class="topo">
+  <img src="logo.png" alt="Pura Patinha">
+  <h1>achadinhos da Pura Patinha 🐾</h1>
+  <p class="sub">viu no vídeo? digita o número que apareceu lá</p>
+  <form class="busca" onsubmit="achar();return false"><span>nº</span><input id="q" inputmode="numeric" pattern="[0-9]*" placeholder="03" aria-label="número do vídeo"><button>achar</button></form>
+  <p class="aviso" id="aviso"></p>
+</header>
+<main>
+<a class="card novo" id="n01" data-n="1" href="https://s.shopee.com.br/6Amh9em65W" target="_blank" rel="noopener nofollow sponsored">
+  <span class="num">nº 01</span><span class="selo">vídeo de hoje</span>
+  <img src="p01.jpg" alt="Bola inteligente automática para cachorro" loading="lazy" width="480" height="480">
+  <span class="nome">Bola inteligente automática para cachorro</span>
+  <span class="linha"><span class="preco">R$ 29,12</span><span class="ver">comprar →</span></span>
+</a>
+<a class="card" id="n02" data-n="2" href="https://s.shopee.com.br/6fixkcIaFF" target="_blank" rel="noopener nofollow sponsored">
+  <span class="num">nº 02</span>
+  <img src="p02.jpg" alt="Brinquedo automático para gato" loading="lazy" width="480" height="480">
+  <span class="nome">Brinquedo automático para gato</span>
+  <span class="linha"><span class="preco">R$ 43,99</span><span class="ver">comprar →</span></span>
+</a>
+<a class="card" id="n03" data-n="3" href="https://s.shopee.com.br/80ELL30iGi" target="_blank" rel="noopener nofollow sponsored">
+  <span class="num">nº 03</span>
+  <img src="p03.jpg" alt="Cama nuvem extra grande 1x1" loading="lazy" width="480" height="480">
+  <span class="nome">Cama nuvem extra grande 1x1</span>
+  <span class="linha"><span class="preco">R$ 181,35</span><span class="ver">comprar →</span></span>
+</a>
+<a class="card" id="n04" data-n="4" href="https://s.shopee.com.br/BVU0fyvYu" target="_blank" rel="noopener nofollow sponsored">
+  <span class="num">nº 04</span>
+  <img src="p04.jpg" alt="Escova secadora pet 2 em 1" loading="lazy" width="480" height="480">
+  <span class="nome">Escova secadora pet 2 em 1</span>
+  <span class="linha"><span class="preco">R$ 45,99</span><span class="ver">comprar →</span></span>
+</a>
+<a class="card" id="n05" data-n="5" href="https://s.shopee.com.br/3Vlvyp3INQ" target="_blank" rel="noopener nofollow sponsored">
+  <span class="num">nº 05</span>
+  <img src="p05.jpg" alt="Fonte bebedouro sem fio para gato e cachorro" loading="lazy" width="480" height="480">
+  <span class="nome">Fonte bebedouro sem fio para gato e cachorro</span>
+  <span class="linha"><span class="preco">R$ 135,98</span><span class="ver">comprar →</span></span>
+</a>
+</main>
+<footer>links de afiliado: se você comprar, a Pura Patinha pode ganhar uma comissão, sem custo a mais pra você. preço e estoque são os da Shopee na hora da compra.</footer>
+<script>
+function achar(){var v=parseInt((document.getElementById('q').value||'').replace(/\D/g,''),10),a=document.getElementById('aviso');
+document.querySelectorAll('.card.achado').forEach(function(c){c.classList.remove('achado')});
+var c=document.querySelector('.card[data-n="'+v+'"]');if(!c){a.textContent=isNaN(v)?'':'esse número não tá aqui (pode ter saído da vitrine). dá uma olhada nos de baixo 👇';return}
+a.textContent='';c.classList.add('achado');c.scrollIntoView({behavior:'smooth',block:'center'})}
+var h=(location.hash||'').replace(/\D/g,'');if(h){document.getElementById('q').value=h;setTimeout(achar,300)}
+</script>
+</body></html>
